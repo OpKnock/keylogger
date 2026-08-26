@@ -1,32 +1,6 @@
-```ruby
-██╗  ██╗███████╗██╗   ██╗██╗      ██████╗  ██████╗  ██████╗ ███████╗██████╗
-██║ ██╔╝██╔════╝╚██╗ ██╔╝██║     ██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝██╔══██╗
-█████╔╝ █████╗   ╚████╔╝ ██║     ██║   ██║██║  ███╗██║  ███╗█████╗  ██████╔╝
-██╔═██╗ ██╔══╝    ╚██╔╝  ██║     ██║   ██║██║   ██║██║   ██║██╔══╝  ██╔══██╗
-██║  ██╗███████╗   ██║   ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║  ██║
-╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝
-```
+# Keylogger
 
-[![Cybersecurity Projects](https://img.shields.io/badge/Cybersecurity--Projects-Project%20%232-red?style=flat&logo=github)](https://github.com/CarterPerez-dev/Cybersecurity-Projects/tree/main/PROJECTS/beginner/keylogger)
-[![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org)
-[![License: AGPLv3](https://img.shields.io/badge/License-AGPL_v3-purple.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Educational](https://img.shields.io/badge/Purpose-Educational_Only-yellow?style=flat)]()
-
-> Educational keylogger for security research demonstrating input capture, window tracking, and C2 delivery techniques.
-
-<p align="center">
-  <a href="https://youtu.be/gTd8cNlMD1k">
-    <img src="https://img.shields.io/badge/Watch_on-YouTube-FF0000?logo=youtube&logoColor=white" alt="Watch on YouTube">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://youtu.be/gTd8cNlMD1k">
-    <img src="https://img.youtube.com/vi/gTd8cNlMD1k/maxresdefault.jpg" alt="Video Thumbnail" width="800">
-  </a>
-</p>
-
-*Learn Docs are in the [learn modules](#learn).*
+Educational keylogger for security research demonstrating input capture, window tracking, and C2 delivery techniques.
 
 ## What It Does
 
@@ -52,8 +26,6 @@ Press **F9** to toggle capture on/off. Press **Ctrl+C** to stop.
 
 > [!TIP]
 > This project uses [`just`](https://github.com/casey/just) as a command runner. Type `just` to see all available commands.
->
-> Install: `curl -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin`
 
 ## Learn
 
@@ -66,7 +38,6 @@ This project includes step-by-step learning materials covering security theory, 
 | [02 - Architecture](learn/02-ARCHITECTURE.md) | System design and data flow |
 | [03 - Implementation](learn/03-IMPLEMENTATION.md) | Code walkthrough |
 | [04 - Challenges](learn/04-CHALLENGES.md) | Extension ideas and exercises |
-
 
 ## License
 
