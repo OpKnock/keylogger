@@ -6,16 +6,53 @@ Educational keylogger for security research demonstrating input capture, window 
 
 This project provides an educational keylogger implementation designed for security research and learning purposes. It demonstrates fundamental concepts in input monitoring, system tracking, and secure coding practices. The tool is intentionally limited to synthetic environments and operates on the local machine only.
 
+**Critical Safety Notice:** This keylogger is provided **strictly for educational and authorized security research purposes only**.
+
+- **Never deploy** this keylogger on any system you do not own or have explicit written permission to monitor
+- **All operations are strictly local** to the machine running the tool
+- **No network transmission** occurs without explicit configuration
+- **This tool must only be used** in controlled lab environments or with proper authorization
+- **Unauthorized use** of keylogging software may violate federal and state laws (CFAA, state privacy laws, workplace monitoring laws)
+- **Always obtain explicit written permission** before deploying any input monitoring software
+
 ## Features
 
-- **Keyboard event capture** with microsecond-precision timestamps for accurate timing analysis
-- **Active window tracking** across Windows, macOS, and Linux platforms
-- **Configurable log rotation** with size limits (default 5MB) to prevent excessive log growth
-- **Runtime control** via F9 hotkey to pause and resume capture at any time
-- **Secure log handling** with thread-safe operations and proper resource locking
-- **Clean exit handling** with Ctrl+C support for graceful shutdown
+### Keyboard Event Capture
+
+- **Microsecond-precision timestamps** for accurate timing analysis
+- **Global keyboard event monitoring** across active sessions
+- **Key press/release tracking** with character identification
+- **Modifier key tracking** (Shift, Ctrl, Alt, Caps Lock)
+
+### Active Window Tracking
+
+- **Cross-platform support**: Windows, macOS, and Linux
+- **Window title tracking** with timestamps
+- **Active process identification**
+- **Window focus change detection**
+
+### Configurable Log Management
+
+- **Size-limited log rotation** (default 5MB) to prevent excessive log growth
+- **Thread-safe log operations** with proper resource locking
+- **Automatic timestamping** of all captured events
+- **Structured log format** for easy analysis
+
+### Runtime Control
+
+- **F9 hotkey** to pause and resume capture at any time
+- **Ctrl+C** for clean exit and graceful shutdown
+- **Configuration via environment variables** for customization
 
 ## Installation
+
+### Requirements
+
+- **Python 3.10 or higher**
+- **Operating system**: Windows, macOS, or Linux
+- **Standard library modules only** (no external dependencies beyond those listed in requirements.txt)
+
+### Setup
 
 ```bash
 # Clone the repository
@@ -25,43 +62,53 @@ cd keylogger
 # Install dependencies
 uv sync
 
-# Run the keylogger
-python keylogger.py
+# Verify installation
+python keylogger.py --help
 ```
 
-## Usage
+### Run the Keylogger
+
+```bash
+python keylogger.py
+```
 
 - Press **F9** to toggle capture on/off
 - Press **Ctrl+C** to stop the program and exit cleanly
 
 The keylogger will begin capturing keyboard events immediately upon launch. Captured data is stored in local log files with automatic rotation when the size limit is reached.
 
-## Safety and Ethics
+## Legal and Ethical Notes
 
-**Important:** This project is designed exclusively for authorized security research and educational purposes. 
+### Authorized Research Only
 
-- Never deploy keyloggers on systems you do not own or have explicit permission to monitor
-- All operations are local to the machine running the tool
-- No network transmission occurs without explicit configuration
-- This tool should only be used in controlled lab environments or with proper authorization
+This tool is designed exclusively for authorized security research. Key principles:
 
-## Requirements
+- **Only deploy on systems you own or administer**
+- **Obtain explicit written permission** from all stakeholders before deployment
+- **Never deploy on production systems** without proper authorization
+- **Report any discovered security findings** to the appropriate system owners
 
-- Python 3.10 or higher
-- Operating system: Windows, macOS, or Linux
-- Standard library modules only (no external dependencies beyond those listed in requirements.txt)
+### Legal Compliance
 
-## Learning Resources
+- Unauthorized installation of keylogging software is illegal in most jurisdictions
+- Federal laws (CFAA, ECPA) and state privacy laws regulate monitoring software
+- Workplace monitoring requires employee consent and compliance with local regulations
+- **Always consult legal counsel** before deploying any input monitoring tools
 
-This project includes comprehensive learning materials:
+### Educational Value
 
-| Module | Topic |
-|--------|-------|
-| [00 - Overview](learn/00-OVERVIEW.md) | Prerequisites, setup, and quick start guide |
-| [01 - Concepts](learn/01-CONCEPTS.md) | Keyboard event architecture, input monitoring techniques, and security implications |
-| [02 - Architecture](learn/02-ARCHITECTURE.md) | System design, module layout, and data flow diagrams |
-| [03 - Implementation](learn/03-IMPLEMENTATION.md) | Complete code walkthrough with explanations for every component |
-| [04 - Challenges](learn/04-CHALLENGES.md) | Extension ideas and exercises for deepening understanding |
+Understanding keylogger architecture helps security teams:
+
+- Design defenses against keylogging malware
+- Implement proper input monitoring controls
+- Educate users about monitoring detection
+- Build awareness of surveillance risks
+
+### Responsible Disclosure
+
+- Report any security concerns to the project maintainers
+- Follow responsible disclosure practices for any discovered vulnerabilities
+- Ensure all testing is conducted in authorized environments only
 
 ## License
 
